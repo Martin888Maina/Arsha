@@ -1,239 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>HOME PAGE ASSIGNMENT</title>
-	<script src="https://kit.fontawesome.com/0bf4634aeb.js" crossorigin="anonymous"></script>
+    <!-- Character encoding for proper text rendering -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport settings for responsive design on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO meta tags for better search engine visibility -->
+    <meta name="description"
+        content="Arsha - Modern business landing page template. Showcase your services, portfolio, and team with a clean, professional design.">
+    <meta name="keywords" content="business landing page, corporate website, portfolio template, responsive design">
+    <meta name="author" content="Martin Maina">
+
+    <!-- Page title displayed in browser tab -->
+    <title>Arsha - Better Solutions For Your Business</title>
+
+    <!-- External stylesheet for all page styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome for scalable vector icons -->
+    <script src="https://kit.fontawesome.com/0bf4634aeb.js" crossorigin="anonymous"></script>
 </head>
-<style>
-	/* BODY STYLING */
 
-	* {box-sizing: border-box;}
-
-	/* NAVIGATION BAR STYLING */
-	.navbar{color: white;
-		   padding-top: 50px;
-		   font-size:15px;
-		   padding-left: 550px;
-		   display: inline;
-		   text-align: center;
-		   text-decoration: none;}
-
-	.container{display: flex;}
-
-	/* BODY STYLING */
-	body {background-color: #6929f2;
-		  font-family: arial;}
-
-
-	.word{color: white;
-		  padding-left: 100px;
-		  font-size: 20px;
-		  font-weight: bold;
-		  float: left;}
-
-    /* BUTTON STYLING */
-	.button1{background-color: #6929f2;
-           border: none;
-           border-radius: 25px;
-           color: white;
-           padding: 10px;
-           text-align: center;
-           display: inline-block;
-           font-size: 15px;
-           margin: 4px 2px;
-           cursor: pointer;} 
-
-	 /* BUTTON STYLING */	   
-	.button2{background-color: #6929f2;
-           border: none;
-           border-radius: 25px;
-           color: white;
-           padding: 10px;
-           text-align: center;
-           display: inline-block;
-           font-size: 15px;
-           margin: 4px 2px;
-           cursor: pointer;}
-           
-     /* BUTTON STYLING */
-    .button3{background-color: #2db0d2;
-           border: none;
-           border-radius: 25px;
-           color: white;
-           padding: 10px;
-           text-align: center;
-           display: inline-block;
-           font-size: 15px;
-           margin: 4px 2px;
-           cursor: pointer;}
-
-	 /* BUTTON STYLING */	   
-    .button4{border: none;}       
-
-
-   /* BODY STYLING */
-    .right{
-           padding-left:200px;
-		   padding-top: 10px;}  
-
-	/* BODY STYLING */	   
-	.left{padding-top: 60px;
-		  color: white;
-		  padding-left: 100px;
-		  padding-bottom: 100px;
-		  word-spacing: 5px;}
-		  
-	/* ICON STYLING */	  
-    .icons{background-size: 10px;
-    	   padding: 50px 300px 50px 300px;
-           background-color: #D3D3D3;}
-
-
-	/* BODY STYLING */	   
-    .ending{background-color: white;
-    	    color:#6929f2; 
-            width: 100%;
-            height: 100px;
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-            padding: 10px;}
-
-    /* BODY STYLING */
-    select{color: white;
-           background-color: #6929f2;
-           border: none;}               
-
-</style>
 <body>
+    <!-- Main navigation bar - sticky positioned for easy access -->
+    <nav class="navbar">
+        <!-- Brand logo/name -->
+        <div class="logo">ARSHA</div>
 
-    <!-- NAVIGATION BAR SECTION -->
-	<div class="navbar">	
+        <!-- Navigation links container -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
 
-		<div class="word">
+            <!-- Call-to-action button in navigation -->
+            <button class="btn btn-primary">Get Started</button>
+        </div>
+    </nav>
 
-	       <p>ARSHA</p>
+    <!-- Hero section - main landing area with primary message -->
+    <main>
+        <section class="hero-container">
+            <!-- Left side: Hero content with headline and CTAs -->
+            <div class="hero-content">
+                <h1>Better Solutions For Your Business</h1>
+                <p>We are a team of talented designers creating amazing websites with modern technologies</p>
 
-	    </div>
+                <!-- Action buttons for user engagement -->
+                <div class="hero-buttons">
+                    <button class="btn btn-secondary">Get Started</button>
+                    <button class="btn btn-play">
+                        <i class="fa-regular fa-circle-play"></i>
+                        <span>Watch Video</span>
+                    </button>
+                </div>
+            </div>
 
-		<a href="Index.html" style="color: white; text-decoration: none;">Home</a>&nbsp &nbsp &nbsp &nbsp
-		<a href="About.html" style="color: white; text-decoration: none;">About</a>&nbsp &nbsp &nbsp &nbsp
-		<a href="Services.html" style="color: white; text-decoration: none;">Services</a> &nbsp &nbsp &nbsp &nbsp
-		<a href="Portfolio.html" style="color: white; text-decoration: none;">Portfolio</a> &nbsp &nbsp &nbsp &nbsp
-		<a href="Team.html" style="color: white; text-decoration: none;">Team</a> &nbsp &nbsp &nbsp &nbsp 
+            <!-- Right side: Hero image/illustration -->
+            <div class="hero-image">
+                <img src="Images/Website.png" alt="Modern website illustration showcasing Arsha's design capabilities">
+            </div>
+        </section>
 
-		<a href="Dropdown.html" style="color: white; text-decoration: none;">Drop Down <select></select></a> &nbsp &nbsp 
-    
-		<a href="Contact" style="color: white; text-decoration: none;">Contact</a> &nbsp &nbsp
+        <!-- Clients section - showcase trusted partners and clients -->
+        <section class="clients-section">
+            <div class="clients-grid">
+                <!-- Client logos displayed in a responsive grid -->
+                <img src="Images/myob.png" alt="MYOB - Trusted client partner">
+                <img src="Images/belimo.png" alt="Belimo - Trusted client partner">
+                <img src="Images/lifegroups.png" alt="LifeGroups - Trusted client partner">
+                <img src="Images/lilly.png" alt="Lilly - Trusted client partner">
+                <img src="Images/citrus.png" alt="Citrus - Trusted client partner">
+                <img src="Images/trustly.png" alt="Trustly - Trusted client partner">
+            </div>
+        </section>
+    </main>
 
-		
-        <!-- BUTTON SECTION -->
-		<button class="button2" style=" background-color:#6929f2; border: 2px solid #2db0d2; color: white;">Get Started</button>
-		
-	
-	</div>
-	<!-- CONTENT SPACING-->
-
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-	&nbsp
-
-	<!-- LINE BREAKS SECTION -->
-
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-
-	<!-- BODY CONTENT SECTION -->
-	
-	<div class="container">
-		<div>
-		<aside class="left">
-
-			<p style="font-size: 30px; font-weight: bold;">Better Solutions For Your Business</p>
-			
-			<p style="color: #DBE9FA; font-size: 20px" >We are the team of talented designers<br> making websites with Bootstrap</p>
-			
-			<!-- BUTTON SECTION -->
-			
-			<button class="button3" style="color: white; background-color:  #2db0d2;">Get Started</button>
-		    
-
-			<button class="button4" style="color: white; background-color: #6929f2;"><p><i class="fa-sharp fa-regular fa-circle-play"></i> Click to play video</p></button>
-
-
-		</aside>
-	</div>
-
-		<div>
-		<article class="right">
-			<img src="Images/Website.png" width="650px" height="auto">
-			
-		</article>
-		</div>
-		
-	</div>
-
-	<!-- LINE BREAKS SECTION -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-       
-	<!-- IMAGES SECTION -->
-	<div class="icons">
-
-		<!-- MYOB ICON SECTION -->
-		<img src="Images/myob.png" width="100px" height="auto">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		
-		<!-- BELIMO ICON SECTION -->
-		<img src="Images/belimo.png" width="100px" height="auto">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-
-	    <!-- LIFEGROUPS ICON SECTION -->
-		<img src="Images/lifegroups.png" width="100px" height="auto">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		
-		<!-- LILLY ICON SECTION -->
-		<img src="Images/lilly.png" width="100px" height="auto">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		
-        <!-- CITRUS ICON SECTION -->
-		<img src="Images/citrus.png" width="100px" height="auto">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		
-		<!-- TRUSTLY ICON SECTION -->
-		<img src="Images/trustly.png" width="100px" height="auto">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-
-
-	</DIV>
-
-    <!-- FOOTER SECTION -->
-	<FOOTER>
-		<div class="ending">
-		<P>ABOUT US</P>
-		</div>
-	</FOOTER>
-
+    <!-- Footer section with additional information -->
+    <footer class="footer">
+        <p>ABOUT US</p>
+    </footer>
 </body>
+
 </html>

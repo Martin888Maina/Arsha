@@ -1,0 +1,422 @@
+/* ===================================
+   CSS VARIABLES & GLOBAL STYLES
+   =================================== */
+
+/* Define color scheme and reusable values for consistency */
+:root {
+    --primary-color: #6929f2;
+    --secondary-color: #2db0d2;
+    --light-purple: #DBE9FA;
+    --gray-bg: #f8f9fa;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --transition-speed: 0.3s;
+    --border-radius: 25px;
+    --max-width: 1200px;
+}
+
+/* Reset and base styles for consistent rendering across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #6929f2 0%, #5420c9 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--white);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ===================================
+   NAVIGATION BAR
+   =================================== */
+
+/* Main navigation container with flexible layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background: rgba(105, 41, 242, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand logo styling for visibility and hierarchy */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual navigation link styling with smooth transitions */
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Underline effect on hover for better user feedback */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   BUTTONS
+   =================================== */
+
+/* Base button styling for all button types */
+.btn {
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Primary action button with outline style */
+.btn-primary {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(45, 176, 210, 0.3);
+}
+
+/* Secondary action button with solid fill */
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: #248fa8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(45, 176, 210, 0.4);
+}
+
+/* Video play button with icon */
+.btn-play {
+    background-color: transparent;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.btn-play:hover {
+    transform: scale(1.05);
+}
+
+.btn-play i {
+    font-size: 20px;
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+
+/* Main hero container with flexible layout for content and image */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px;
+    gap: 50px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* Left side content area */
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-content p {
+    color: var(--light-purple);
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    animation: fadeInUp 1s ease;
+}
+
+/* Button group for call-to-action buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1.2s ease;
+}
+
+/* Right side image area */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInRight 1s ease;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    transition: transform var(--transition-speed) ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   CLIENTS SECTION
+   =================================== */
+
+/* Container for client logos */
+.clients-section {
+    background-color: var(--gray-bg);
+    padding: 60px 100px;
+    text-align: center;
+}
+
+.clients-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Individual client logo styling with grayscale effect */
+.clients-grid img {
+    width: 100px;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all var(--transition-speed) ease;
+}
+
+.clients-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+/* Footer section with centered content */
+.footer {
+    background-color: var(--white);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+
+/* Fade in and slide up animation for hero content */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in and slide from right for hero image */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Tablet devices - adjust spacing and font sizes */
+@media (max-width: 968px) {
+    .navbar {
+        padding: 20px 50px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        padding: 60px 50px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .clients-section {
+        padding: 40px 50px;
+    }
+
+    .clients-grid {
+        gap: 40px;
+    }
+}
+
+/* Mobile devices - stack all elements vertically */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 14px;
+        justify-content: center;
+    }
+
+    .hero-container {
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .clients-section {
+        padding: 30px 20px;
+    }
+
+    .clients-grid {
+        gap: 30px;
+    }
+
+    .clients-grid img {
+        width: 80px;
+    }
+
+    .footer {
+        font-size: 20px;
+        padding: 30px 15px;
+    }
+}
+
+/* Very small devices - further optimization */
+@media (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .clients-grid img {
+        width: 60px;
+    }
+}
