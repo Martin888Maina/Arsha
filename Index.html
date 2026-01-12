@@ -32,21 +32,21 @@
 
         <!-- Navigation links container -->
         <div class="nav-links">
-            <a href="index.html">Home</a>
+            <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#team">Team</a>
+            <a href="#features">Features</a>
+            <a href="#clients">Clients</a>
             <a href="#contact">Contact</a>
 
             <!-- Call-to-action button in navigation -->
-            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-primary" onclick="scrollToSection('contact')">Get Started</button>
         </div>
     </nav>
 
     <!-- Hero section - main landing area with primary message -->
     <main>
-        <section class="hero-container">
+        <section id="home" class="hero-container">
             <!-- Left side: Hero content with headline and CTAs -->
             <div class="hero-content">
                 <h1>Better Solutions For Your Business</h1>
@@ -54,7 +54,7 @@
 
                 <!-- Action buttons for user engagement -->
                 <div class="hero-buttons">
-                    <button class="btn btn-secondary">Get Started</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">Get Started</button>
                     <button class="btn btn-play">
                         <i class="fa-regular fa-circle-play"></i>
                         <span>Watch Video</span>
@@ -68,24 +68,217 @@
             </div>
         </section>
 
+        <!-- About section - company overview and value proposition -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About Us</h2>
+                        <p class="section-subtitle">Learn more about our mission and values</p>
+                        <p class="about-description">
+                            We build innovative digital solutions that help businesses thrive in the modern world.
+                            With a focus on quality, performance, and user experience, we deliver websites and
+                            applications that make a real difference.
+                        </p>
+                        <ul class="about-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Professional and experienced team</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Modern design and development practices</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Dedicated customer support</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Results-driven approach</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services section - what we offer -->
+        <section id="services" class="services-section">
+            <div class="section-container">
+                <h2 class="section-title center">Our Services</h2>
+                <p class="section-subtitle center">Comprehensive solutions for your digital needs</p>
+
+                <div class="services-grid">
+                    <!-- Service card 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3>Web Design</h3>
+                        <p>Beautiful, user-friendly designs that capture your brand's essence and engage your audience
+                            effectively.</p>
+                    </div>
+
+                    <!-- Service card 2 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Development</h3>
+                        <p>Clean, efficient code built with the latest technologies to ensure your website performs
+                            flawlessly.</p>
+                    </div>
+
+                    <!-- Service card 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                        <p>Websites that look stunning and work perfectly on all devices, from desktop to mobile.</p>
+                    </div>
+
+                    <!-- Service card 4 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3>SEO Optimization</h3>
+                        <p>Improve your search engine rankings and drive more organic traffic to your website.</p>
+                    </div>
+
+                    <!-- Service card 5 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3>Analytics</h3>
+                        <p>Data-driven insights to help you understand your audience and make informed decisions.</p>
+                    </div>
+
+                    <!-- Service card 6 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock technical support to ensure your website runs smoothly at all times.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features section - why choose us -->
+        <section id="features" class="features-section">
+            <div class="section-container">
+                <h2 class="section-title center">Why Choose Arsha</h2>
+                <p class="section-subtitle center">We deliver excellence in every project</p>
+
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="feature-number">01</div>
+                        <h3>Innovative Solutions</h3>
+                        <p>We stay ahead of the curve with cutting-edge technologies and creative approaches.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-number">02</div>
+                        <h3>Expert Team</h3>
+                        <p>Our team consists of highly skilled professionals with years of industry experience.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-number">03</div>
+                        <h3>Client Focused</h3>
+                        <p>Your success is our priority. We work closely with you to achieve your goals.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-number">04</div>
+                        <h3>Quality Assurance</h3>
+                        <p>Rigorous testing and quality control ensure flawless delivery every time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Clients section - showcase trusted partners and clients -->
-        <section class="clients-section">
-            <div class="clients-grid">
-                <!-- Client logos displayed in a responsive grid -->
-                <img src="Images/myob.png" alt="MYOB - Trusted client partner">
-                <img src="Images/belimo.png" alt="Belimo - Trusted client partner">
-                <img src="Images/lifegroups.png" alt="LifeGroups - Trusted client partner">
-                <img src="Images/lilly.png" alt="Lilly - Trusted client partner">
-                <img src="Images/citrus.png" alt="Citrus - Trusted client partner">
-                <img src="Images/trustly.png" alt="Trustly - Trusted client partner">
+        <section id="clients" class="clients-section">
+            <div class="section-container">
+                <h2 class="section-title center">Trusted By Leading Companies</h2>
+                <div class="clients-grid">
+                    <!-- Client logos displayed in a responsive grid -->
+                    <img src="Images/myob.png" alt="MYOB - Trusted client partner">
+                    <img src="Images/belimo.png" alt="Belimo - Trusted client partner">
+                    <img src="Images/lifegroups.png" alt="LifeGroups - Trusted client partner">
+                    <img src="Images/lilly.png" alt="Lilly - Trusted client partner">
+                    <img src="Images/citrus.png" alt="Citrus - Trusted client partner">
+                    <img src="Images/trustly.png" alt="Trustly - Trusted client partner">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section - call to action -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="contact-content">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Let's work together to bring your vision to life. Contact us today for a free consultation.</p>
+                    <div class="contact-buttons">
+                        <button class="btn btn-secondary">Contact Us</button>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer section with additional information -->
+    <!-- Footer section with company information and links -->
     <footer class="footer">
-        <p>ABOUT US</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ARSHA</h3>
+                <p>Building better digital experiences for businesses worldwide.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Web Design</a></li>
+                    <li><a href="#services">Development</a></li>
+                    <li><a href="#services">SEO</a></li>
+                    <li><a href="#services">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-envelope"></i> info@arsha.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +1 234 567 8900</li>
+                    <li><i class="fa-solid fa-location-dot"></i> 123 Business Ave</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Arsha. All rights reserved. | Designed by <a href="https://github.com/Martin888Maina"
+                    target="_blank">Martin Maina</a></p>
+        </div>
     </footer>
+
+    <!-- Simple JavaScript for smooth scrolling functionality -->
+    <script src="script.js"></script>
 </body>
 
 </html>
