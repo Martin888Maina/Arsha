@@ -2,7 +2,7 @@
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-        section.scrollIntoView({ 
+        section.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
@@ -10,14 +10,14 @@ function scrollToSection(sectionId) {
 }
 
 // Add smooth scrolling to all anchor links
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Get all navigation links
     const navLinks = document.querySelectorAll('.nav-links a, .footer-section a');
-    
+
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            
+
             // Check if link is an internal anchor
             if (href && href.startsWith('#')) {
                 e.preventDefault();
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
@@ -55,27 +55,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     let lastScroll = 0;
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const currentScroll = window.pageYOffset;
-        
+
         // Add shadow effect when scrolling
         if (currentScroll > 100) {
             navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
         } else {
             navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
         }
-        
+
         lastScroll = currentScroll;
     });
 
     // Add hover effect to service cards
     const serviceCards = document.querySelectorAll('.service-card');
     serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.borderTop = '3px solid #2db0d2';
         });
 
-        card.addEventListener('mouseleave', function() {
+        card.addEventListener('mouseleave', function () {
             this.style.borderTop = 'none';
         });
     });
@@ -84,15 +84,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const featureNumbers = document.querySelectorAll('.feature-number');
     featureNumbers.forEach(number => {
         number.style.transition = 'all 0.3s ease';
-        
-        number.parentElement.addEventListener('mouseenter', function() {
+
+        number.parentElement.addEventListener('mouseenter', function () {
             number.style.opacity = '0.6';
             number.style.transform = 'scale(1.1)';
         });
 
-        number.parentElement.addEventListener('mouseleave', function() {
+        number.parentElement.addEventListener('mouseleave', function () {
             number.style.opacity = '0.3';
             number.style.transform = 'scale(1)';
+        });
+    });
+
+    // Scroll to top button functionality
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 300) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 });

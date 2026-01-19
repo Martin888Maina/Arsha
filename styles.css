@@ -642,6 +642,300 @@ body {
 }
 
 /* ===================================
+   PORTFOLIO SECTION
+   =================================== */
+
+.portfolio-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+/* Grid layout for portfolio items */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Individual portfolio item with image and overlay */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--card-radius);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.1);
+}
+
+/* Overlay with project details */
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    padding: 30px 20px;
+    transform: translateY(100%);
+    transition: transform var(--transition-speed) ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.portfolio-overlay h3 {
+    color: var(--white);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.portfolio-overlay p {
+    color: var(--light-purple);
+    font-size: 15px;
+}
+
+/* ===================================
+   TEAM SECTION
+   =================================== */
+
+.team-section {
+    padding: var(--section-padding);
+    background-color: var(--gray-bg);
+}
+
+/* Grid layout for team members */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+/* Individual team member card */
+.team-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--card-radius);
+    text-align: center;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Team member image placeholder */
+.team-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #6929f2 0%, #2db0d2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-speed) ease;
+}
+
+.team-card:hover .team-image {
+    transform: scale(1.1);
+}
+
+.team-image i {
+    font-size: 50px;
+    color: var(--white);
+}
+
+.team-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.team-role {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.team-bio {
+    font-size: 15px;
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Social links for team members */
+.team-social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.team-social a {
+    width: 35px;
+    height: 35px;
+    background-color: var(--gray-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    transition: all var(--transition-speed) ease;
+}
+
+.team-social a:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* ===================================
+   TESTIMONIALS SECTION
+   =================================== */
+
+.testimonials-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+/* Grid layout for testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Individual testimonial card */
+.testimonial-card {
+    background: var(--white);
+    padding: 35px 30px;
+    border-radius: var(--card-radius);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-speed) ease;
+    border-left: 4px solid transparent;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-left-color: var(--secondary-color);
+}
+
+/* Star rating display */
+.testimonial-stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.testimonial-stars i {
+    color: #ffc107;
+    font-size: 18px;
+}
+
+/* Testimonial text content */
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* Author information */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-image {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #6929f2 0%, #2db0d2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.author-image i {
+    font-size: 24px;
+    color: var(--white);
+}
+
+.author-info h4 {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-bottom: 3px;
+}
+
+.author-info p {
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+/* ===================================
+   SCROLL TO TOP BUTTON
+   =================================== */
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #6929f2 0%, #2db0d2 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 5px 20px rgba(105, 41, 242, 0.3);
+    transition: all var(--transition-speed) ease;
+    z-index: 999;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(105, 41, 242, 0.5);
+}
+
+.scroll-top.visible {
+    display: flex;
+}
+
+/* ===================================
    ANIMATIONS
    =================================== */
 
@@ -837,6 +1131,21 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 }
 
