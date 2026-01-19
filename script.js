@@ -11,10 +11,30 @@ function scrollToSection(sectionId) {
 
 // Add smooth scrolling to all anchor links
 document.addEventListener('DOMContentLoaded', function () {
-    // Get all navigation links
-    const navLinks = document.querySelectorAll('.nav-links a, .footer-section a');
+    // Mobile menu toggle functionality
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinks');
 
-    navLinks.forEach(link => {
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function () {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const menuLinks = navLinks.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
+    // Get all navigation links
+    const allNavLinks = document.querySelectorAll('.nav-links a, .footer-section a');
+
+    allNavLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
 
@@ -50,6 +70,44 @@ document.addEventListener('DOMContentLoaded', function () {
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
     });
+
+    // Animated counter for statistics numbers
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let countersAnimated = false;
+
+    const animateCounter = (element) => {
+        const target = parseInt(element.getAttribute('data-target'));
+        const duration = 2000; // Animation duration in milliseconds
+        const step = target / (duration / 16); // 60 FPS
+        let current = 0;
+
+        const updateCounter = () => {
+            current += step;
+            if (current < target) {
+                element.textContent = Math.floor(current) + '+';
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = target + '+';
+            }
+        };
+
+        updateCounter();
+    };
+
+    // Observe stats section for counter animation
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !countersAnimated) {
+                statNumbers.forEach(num => animateCounter(num));
+                countersAnimated = true;
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+        statsObserver.observe(statsSection);
+    }
 
     // Navbar background change on scroll
     const navbar = document.querySelector('.navbar');

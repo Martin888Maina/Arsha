@@ -20,6 +20,15 @@
     <!-- Favicon for browser tab -->
     <link rel="icon" type="image/png" href="favicon.png">
 
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Theme color for browser chrome -->
+    <meta name="theme-color" content="#6929f2">
+
     <!-- Open Graph meta tags for social media sharing -->
     <meta property="og:title" content="Arsha - Better Solutions For Your Business">
     <meta property="og:description"
@@ -40,8 +49,15 @@
         <!-- Brand logo/name -->
         <div class="logo">ARSHA</div>
 
+        <!-- Mobile menu toggle button -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <!-- Navigation links container -->
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
@@ -102,6 +118,41 @@
                         <div class="image-placeholder">
                             <i class="fa-solid fa-laptop-code"></i>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics section - showcase achievements and social proof -->
+        <section class="stats-section">
+            <div class="section-container">
+                <div class="stats-grid">
+                    <!-- Stat 1: Years of Experience -->
+                    <div class="stat-box">
+                        <i class="fa-solid fa-award"></i>
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+
+                    <!-- Stat 2: Happy Clients -->
+                    <div class="stat-box">
+                        <i class="fa-solid fa-users"></i>
+                        <div class="stat-number" data-target="250">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+
+                    <!-- Stat 3: Projects Completed -->
+                    <div class="stat-box">
+                        <i class="fa-solid fa-rocket"></i>
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+
+                    <!-- Stat 4: Team Members -->
+                    <div class="stat-box">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-label">Team Members</div>
                     </div>
                 </div>
             </div>
