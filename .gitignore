@@ -25,3 +25,7 @@ pids
 # Temporary files
 *.tmp
 .cache/
+
+# Deployment documentation (local only — never push to GitHub)
+*.md
+!README.md
