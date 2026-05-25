@@ -1,4 +1,3 @@
-// Smooth scrolling function for navigation links
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -9,7 +8,6 @@ function scrollToSection(sectionId) {
     }
 }
 
-// Add smooth scrolling to all anchor links
 document.addEventListener('DOMContentLoaded', function () {
     // Mobile menu toggle functionality
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
@@ -31,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Get all navigation links
     const allNavLinks = document.querySelectorAll('.nav-links a, .footer-section a');
 
     allNavLinks.forEach(link => {
@@ -47,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Add scroll animation to sections when they come into view
+    // Reveal sections on scroll using IntersectionObserver
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -62,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, observerOptions);
 
-    // Observe all sections for scroll animations
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         section.style.opacity = '0';
@@ -77,8 +73,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const animateCounter = (element) => {
         const target = parseInt(element.getAttribute('data-target'));
-        const duration = 2000; // Animation duration in milliseconds
-        const step = target / (duration / 16); // 60 FPS
+        const duration = 2000; // 2 s keeps the count readable without feeling slow
+        const step = target / (duration / 16); // 16 ms ≈ one frame at 60 FPS
         let current = 0;
 
         const updateCounter = () => {
@@ -94,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCounter();
     };
 
-    // Observe stats section for counter animation
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && !countersAnimated) {
@@ -116,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
         const currentScroll = window.pageYOffset;
 
-        // Add shadow effect when scrolling
         if (currentScroll > 100) {
             navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
         } else {
